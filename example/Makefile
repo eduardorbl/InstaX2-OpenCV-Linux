@@ -1,8 +1,7 @@
 # Makefile para compilar o projeto com OpenCV e SDK da câmera
-
 CXX = g++
-CXXFLAGS = -std=c++11 `pkg-config --cflags opencv4` -I/home/eduardo/Downloads/SDKOficial/include
-LDFLAGS = `pkg-config --libs opencv4` -L/home/eduardo/Downloads/SDKOficial/lib -lCameraSDK -ludev -lavcodec -lavformat -lavutil -lswscale 
+CXXFLAGS = -std=c++11 `pkg-config --cflags opencv4` -I../include
+LDFLAGS = `pkg-config --libs opencv4` -L../lib -lCameraSDK -ludev -lavcodec -lavformat -lavutil -lswscale 
 
 TARGET = SDKDemo
 SOURCES = main.cc
@@ -17,8 +16,9 @@ install: $(TARGET)
 	@echo "SDKDemo installed."
 
 run: $(TARGET)
-	sudo LD_LIBRARY_PATH=$(LD_LIBRARY_PATH):/home/eduardo/Downloads/SDKOficial/lib ./$(TARGET)
+	sudo LD_LIBRARY_PATH=$(LD_LIBRARY_PATH):../lib ./$(TARGET)
 
 clean:
 	rm -f $(TARGET)
 	@echo "Cleaned up."
+
