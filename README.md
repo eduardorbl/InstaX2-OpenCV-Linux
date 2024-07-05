@@ -31,11 +31,6 @@ make install
 ```
 
 ## Running the Project
-### Configuring Environment
-Before running the executable, ensure the SDK and OpenCV libraries are in your system's library path. You can set this using 
-```
-LD_LIBRARY_PATH: export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/path/to/SDK/lib
-```
 ### Starting the Application
 Run the compiled executable:
 ```
@@ -47,7 +42,7 @@ make run
 - main.cc: Contains the main application logic, including camera initialization, stream handling, and OpenCV integration.
 - Makefile: Compiles the project using g++ with specified flags for SDK and OpenCV.
 - README.md: This file, providing instructions and documentation for the project.
-## Usage Notes
+## Usage Notes 
 - Camera Connection: Ensure the Insta X2 360 camera is connected and accessible before running the application.
 - SDK Documentation: Refer to the official Insta X2 360 camera SDK documentation for detailed API usage and additional features.
 - OpenCV Usage: Utilize OpenCV functions in process_video_data and display_frame methods for image processing and visualization.
